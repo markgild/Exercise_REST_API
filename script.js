@@ -1,6 +1,11 @@
 const url = 'https://nominatim.openstreetmap.org/search?format=json&q=Roermond';
 
-fetch(url)
+fetch(url, {
+  method: "Get",
+  headers: {
+    "Accept": "application/json"
+  }
+})
   .then(response => response.json())
   .then(data => {
     console.log(data);
